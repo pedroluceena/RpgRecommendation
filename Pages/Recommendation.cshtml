@@ -1,0 +1,34 @@
+@page
+@model RpgRecommendation.Pages.RecommendationModel
+@{
+    ViewData["Title"] = "Recomendação de RPG";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form method="post">
+    @foreach (var question in Model.Questions)
+    {
+        <div>
+            <label>@question.Value</label>
+            <select name="@question.Key">
+                <option value="aberto">Mundo Aberto</option>
+                <option value="linear">Mundo Linear</option>
+                <option value="tempo real">Combate em Tempo Real</option>
+                <option value="turnos">Combate por Turnos</option>
+                <option value="sombria">História Sombria</option>
+                <option value="leve">História Leve</option>
+                <option value="sim">Sim</option>
+                <option value="não">Não</option>
+                <option value="realistas">Gráficos Realistas</option>
+                <option value="estilizados">Gráficos Estilizados</option>
+            </select>
+        </div>
+    }
+    <button type="submit">Recomendar RPG</button>
+</form>
+
+@if (!string.IsNullOrEmpty(Model.RecommendedRpg))
+{
+    <h2>Recomendação: @Model.RecommendedRpg</h2>
+}
