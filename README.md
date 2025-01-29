@@ -62,3 +62,4 @@ Contribuições são bem-vindas! Siga os passos abaixo:
 Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
 
 Feito com ❤️ por Pedro Luceena.
+Obrigado
